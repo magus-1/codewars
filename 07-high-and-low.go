@@ -1,7 +1,6 @@
 package kata
 
 import (
-	"fmt"
 	"strconv"
 	"strings"
 )
@@ -34,9 +33,11 @@ func MinMax(intSlice []int64) (int64, int64) {
 	return min, max
 }
 
+/*
 func main() {
 	fmt.Println(strconv.ParseInt("-1", 10, 64))
 	fmt.Println(HighAndLow("1 2 3 4 5"))  // return "5 1"
 	fmt.Println(HighAndLow("1 2 -3 4 5")) // return "5 -3"
 	fmt.Println(HighAndLow("1 9 3 4 -5")) // return "9 -5"
 }
+*/
