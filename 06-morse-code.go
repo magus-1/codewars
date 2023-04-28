@@ -14,7 +14,8 @@ func DecodeMorse(morseCode string) string {
 		if v == "......." {
 			result += " "
 		} else {
-			result += MORSE_CODE[v]
+			// result += MORSE_CODE[v]
+			result += v // replacement line to avoid error in local repo
 		}
 	}
 	fmt.Println("Result:", result, "\nmorseCode:", morseCode, "\nlistCodes:", listCodes)
