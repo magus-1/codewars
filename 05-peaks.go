@@ -16,18 +16,18 @@ func PickPeaks(array []int) PosPeaks {
 			continue
 		}
 
-		if isPeak == false && array[i-1] < v {
+		if !isPeak && array[i-1] < v {
 			// check if a peak is starting, register i, v
 			isPeak = true
 			newPos, newPeak = i, v
 		}
 
-		if isPeak == true && v < array[i+1] {
+		if isPeak && v < array[i+1] {
 			// handles non-peaks outside peak start position
 			isPeak = false
 		}
 
-		if isPeak == true && v > array[i+1] {
+		if isPeak && v > array[i+1] {
 			// handles peaks register outside peak start position
 			resultPos = append(resultPos, newPos)
 			resultPeaks = append(resultPeaks, newPeak)
